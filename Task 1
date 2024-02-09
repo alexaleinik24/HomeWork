@@ -1,0 +1,18 @@
+def print_range(m, n):
+    if m > n:
+        return
+    if m == n:
+        print(m)
+        return
+    print(m, end=", ")
+    print_range(m + 1, n)
+
+M = 1
+N = 5
+print(f"M = {M}; N = {N} -> ", end="")
+print_range(M, N)
+
+M = 4
+N = 8
+print(f"M = {M}; N = {N} -> ", end="")
+print_range(M, N)
