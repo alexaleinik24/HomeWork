@@ -1,18 +1,32 @@
-def print_range(m, n):
-    if m > n:
-        return
-    if m == n:
-        print(m)
-        return
-    print(m, end=", ")
-    print_range(m + 1, n)
+using System;
 
-M = 1
-N = 5
-print(f"M = {M}; N = {N} -> ", end="")
-print_range(M, N)
+class Program
+{
+    static void PrintRange(int m, int n)
+    {
+        if (m > n)
+            return;
+        if (m == n)
+        {
+            Console.Write(m);
+            return;
+        }
+        Console.Write($"{m}, ");
+        PrintRange(m + 1, n);
+    }
 
-M = 4
-N = 8
-print(f"M = {M}; N = {N} -> ", end="")
-print_range(M, N)
+    static void Main(string[] args)
+    {
+        int M = 1;
+        int N = 5;
+        Console.Write($"M = {M}; N = {N} -> ");
+        PrintRange(M, N);
+        Console.WriteLine();
+
+        M = 4;
+        N = 8;
+        Console.Write($"M = {M}; N = {N} -> ");
+        PrintRange(M, N);
+        Console.WriteLine();
+    }
+}
