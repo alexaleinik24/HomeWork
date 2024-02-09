@@ -1,0 +1,10 @@
+def print_reverse(arr, index):
+    if index < 0:
+        return
+    print(arr[index], end=" ")
+    print_reverse(arr, index - 1)
+
+array = [1, 2, 5, 0, 10, 34]
+print("Original array:", array)
+print("Reversed array:", end=" ")
+print_reverse(array, len(array) - 1)
