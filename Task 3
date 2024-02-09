@@ -1,10 +1,27 @@
-def print_reverse(arr, index):
-    if index < 0:
-        return
-    print(arr[index], end=" ")
-    print_reverse(arr, index - 1)
+using System;
 
-array = [1, 2, 5, 0, 10, 34]
-print("Original array:", array)
-print("Reversed array:", end=" ")
-print_reverse(array, len(array) - 1)
+class Program
+{
+    static void PrintArrayReverse(int[] arr, int index)
+    {
+        if (index < 0)
+            return;
+        
+        Console.Write(arr[index] + " ");
+        PrintArrayReverse(arr, index - 1);
+    }
+
+    static void Main(string[] args)
+    {
+        int[] array = { 1, 2, 5, 0, 10, 34 };
+        Console.Write("Original array: ");
+        foreach (int num in array)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+
+        Console.Write("Reversed array: ");
+        PrintArrayReverse(array, array.Length - 1);
+    }
+}
